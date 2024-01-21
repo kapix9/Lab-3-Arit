@@ -1,13 +1,13 @@
 import string
 import random
 
-def generuj_haslo():
+def generate_password():
     # definicja znakow ktore moga zostac uzyte
-    znaki = string.ascii_letters + string.digits + string.punctuation
+    characters = string.ascii_letters + string.digits + string.punctuation
     # definicja dlugosci hasla od 8 do 16 znakow
-    dlugosc_hasla = random.randint(8, 16)
-    haslo = ''.join(random.choice(znaki) for _ in range(dlugosc_hasla))
-    return haslo
+    length_password = random.randint(8, 16)
+    password = ''.join(random.choice(characters) for _ in range(length_password))
+    return password
 
 # test funkcji
-print("Wygenerowane hasło:", generuj_haslo())
+print("Wygenerowane hasło:", generate_password())
